@@ -118,7 +118,7 @@ body{transition:background-color .4s,color .4s}
 <footer><span>© 2026 FoxPrime · <a href="mailto:foxhubbr@gmail.com" style="margin:0">foxhubbr@gmail.com</a></span><span><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos de uso</a><a href="mailto:foxhubbr@gmail.com">Contato</a></span></footer>
 <script>
 /* ===== CONFIGURE AQUI ===== */
-const DOWNLOAD_URL="COLE_AQUI_O_LINK_DO_SEU_INSTALADOR"; /* ex.: link da página Releases do GitHub */
+const DOWNLOAD_URL="https://github.com/lordappszin/Foxprime/releases/tag/1.0.1"; /* ex.: link da página Releases do GitHub */
 const LIVEPIX_URL="https://livepix.gg/leleyzaobr";
 const okDL=/^https?:\/\//.test(DOWNLOAD_URL);
 document.querySelectorAll('.dl').forEach(a=>{a.href=okDL?DOWNLOAD_URL:'#baixar';if(!okDL)a.addEventListener('click',e=>{e.preventDefault();alert('O instalador ainda não foi publicado. Configure DOWNLOAD_URL no index.html.')})});
