@@ -1,0 +1,46 @@
+COMO COLOCAR O SITE DO FOXPRIME NO AR (GitHub + Netlify, tudo gratuito)
+
+O QUE VAI ONDE
+- O SITE (index.html, privacidade.html, termos.html) vai no GitHub e o Netlify publica.
+- O INSTALADOR (FoxPrime-Setup.exe, gerado pelo construir.bat na pasta dist) vai na aba "Releases" do GitHub.
+  Nao coloque o .exe junto com os arquivos do site: o GitHub recusa arquivos acima de 100 MB no repositorio,
+  e o Releases aceita arquivos grandes.
+
+PASSO 1 - Criar o repositorio
+1. Entre em github.com e crie uma conta (se ainda nao tiver).
+2. Clique em "New repository", dê o nome foxprime e deixe como Public. Crie o repositorio.
+3. Clique em "uploading an existing file", arraste os 3 arquivos .html e as 6 imagens .jpg (print-*.jpg) desta pasta e clique em "Commit changes".
+   (Os arquivos precisam ficar na raiz do repositorio, nao dentro de uma subpasta.)
+
+PASSO 2 - Publicar o instalador
+1. No repositorio, abra "Releases" > "Create a new release".
+2. Em "Choose a tag", digite v1.0.0 e crie a tag. Titulo: FoxPrime 1.0.0.
+3. Arraste o arquivo dist\FoxPrime-Setup.exe para a area de anexos e clique em "Publish release".
+4. O link direto de download fica assim (troque SEUUSUARIO pelo seu nome no GitHub):
+   https://github.com/SEUUSUARIO/foxprime/releases/latest/download/FoxPrime-Setup.exe
+   O nome do arquivo no link precisa ser identico ao do .exe anexado.
+
+PASSO 3 - Colocar o link no site
+1. No GitHub, abra o index.html e clique no lapis (Edit).
+2. Procure a linha:  const DOWNLOAD_URL="COLE_AQUI_O_LINK_DO_SEU_INSTALADOR";
+3. Troque pelo link do passo 2 e clique em "Commit changes".
+
+PASSO 4 - Netlify
+1. Entre em netlify.com e crie a conta usando "Sign up with GitHub".
+2. Clique em "Add new site" > "Import an existing project" > GitHub e escolha o repositorio foxprime.
+3. Build command: deixe vazio. Publish directory: deixe vazio ou ponha um ponto (.). Clique em "Deploy".
+4. Em "Site configuration" > "Change site name" escolha o endereco, por exemplo foxprime (fica foxprime.netlify.app).
+   Se o nome ja estiver em uso, tente outro.
+Pronto: sempre que voce editar um arquivo no GitHub, o Netlify republica sozinho em segundos.
+
+QUANDO LANCAR UMA VERSAO NOVA
+1. Gere o instalador novo com o construir.bat.
+2. No GitHub, crie uma nova release (v1.0.1, v1.0.2...) com o novo FoxPrime-Setup.exe. O link "latest" passa a apontar para ela.
+3. Se mudar o numero da versao, troque a linha  const VERSION="..."  no index.html (o texto da versao aparece em dois lugares do site).
+
+AVISOS
+- O Windows vai mostrar o aviso azul do SmartScreen porque o instalador nao tem assinatura digital paga.
+  A pagina ja explica como continuar ("Mais informacoes" > "Executar assim mesmo").
+- Os textos de privacidade.html e termos.html descrevem tudo o que o app faz. Mantenha-os sempre iguais ao
+  comportamento real do app e revise quando adicionar funcoes novas.
+- Antes de divulgar, pesquise se o nome "FoxPrime" ja e marca registrada de alguem.

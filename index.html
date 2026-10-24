@@ -4,7 +4,7 @@
 <meta property="og:description" content="Player de música gratuito para Windows, com temas, visualizadores e equalizador.">
 <meta property="og:type" content="website">
 <title>FoxPrime: seu player de música para Windows</title>
-<meta name="description" content="FoxPrime é um player de música gratuito para Windows, com sugestões para você, temas, visualizadores e equalizador.">
+<meta name="description" content="FoxPrime é um player de música gratuito para Windows: simples de usar, com mini player, vários temas, visualizadores e equalizador.">
 <style>
 :root{--bg:#fff;--s:#f6f4f1;--l:#e9e4de;--f:#1d1a17;--m:#7d766e;--a:#7b4b2a;--b1:#e0a98a;--b2:#e0c08a;--b3:#e08aa9;--fs:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--e:cubic-bezier(.2,.8,.2,1)}
 *{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
@@ -22,7 +22,7 @@ body{font:16px/1.6 "Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;back
 .bl i:nth-child(3){background:var(--b3);left:40%;top:40%;width:28vmax;height:28vmax;opacity:.2;animation-duration:27s;animation-delay:-11s}
 header{display:flex;justify-content:space-between;align-items:center;max-width:1080px;margin:0 auto;padding:22px 24px}
 header b{font:600 22px var(--fs)}header a:not(.btn){color:var(--m);text-decoration:none;margin-left:22px;font-size:14px;transition:color .25s}header a:not(.btn):hover{color:var(--f)}
-.btn{display:inline-block;background:var(--a);color:#fff;font-weight:600;padding:14px 30px;border-radius:999px;text-decoration:none;transition:transform .3s var(--e),box-shadow .3s}
+.btn{display:inline-block;background:var(--a);color:var(--on,#fff);font-weight:600;padding:14px 30px;border-radius:999px;text-decoration:none;transition:transform .3s var(--e),box-shadow .3s}
 .btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(123,75,42,.3)}.btn:active{transform:scale(.97)}.btn.s{padding:9px 20px;font-size:14px}
 .hero{position:relative;text-align:center;padding:9vh 24px 40px}
 .mq{position:absolute;left:0;top:2vh;display:flex;width:max-content;font:700 170px/1 var(--fs);color:transparent;-webkit-text-stroke:1.2px var(--l);white-space:nowrap;pointer-events:none;animation:mq 50s linear infinite;z-index:-1}.mq span{padding-right:.5em}
@@ -58,25 +58,53 @@ footer a{color:var(--m);margin-left:18px}
 .viz i{flex:1;height:100%;background:linear-gradient(to top,var(--a),var(--b2));border-radius:4px;transform-origin:bottom;animation:eq 1.4s ease-in-out infinite}
 .viz i:nth-child(1){animation-delay:-0.37s;animation-duration:1.13s}.viz i:nth-child(2){animation-delay:-0.74s;animation-duration:1.26s}.viz i:nth-child(3){animation-delay:-1.11s;animation-duration:1.39s}.viz i:nth-child(4){animation-delay:-0.08s;animation-duration:1.52s}.viz i:nth-child(5){animation-delay:-0.45s;animation-duration:1.65s}.viz i:nth-child(6){animation-delay:-0.82s;animation-duration:1.78s}.viz i:nth-child(7){animation-delay:-1.19s;animation-duration:1.01s}.viz i:nth-child(8){animation-delay:-0.16s;animation-duration:1.14s}.viz i:nth-child(9){animation-delay:-0.53s;animation-duration:1.27s}.viz i:nth-child(10){animation-delay:-0.90s;animation-duration:1.40s}.viz i:nth-child(11){animation-delay:-1.27s;animation-duration:1.53s}.viz i:nth-child(12){animation-delay:-0.24s;animation-duration:1.66s}.viz i:nth-child(13){animation-delay:-0.61s;animation-duration:1.79s}.viz i:nth-child(14){animation-delay:-0.98s;animation-duration:1.02s}.viz i:nth-child(15){animation-delay:-1.35s;animation-duration:1.15s}.viz i:nth-child(16){animation-delay:-0.32s;animation-duration:1.28s}.viz i:nth-child(17){animation-delay:-0.69s;animation-duration:1.41s}.viz i:nth-child(18){animation-delay:-1.06s;animation-duration:1.54s}.viz i:nth-child(19){animation-delay:-0.03s;animation-duration:1.67s}.viz i:nth-child(20){animation-delay:-0.40s;animation-duration:1.80s}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .9s var(--e)}.rv.in{opacity:1;transform:none}
+.shot{max-width:980px;margin:0 auto;border-radius:18px;overflow:hidden;border:1px solid var(--l);background:var(--s);box-shadow:0 24px 60px rgba(0,0,0,.14)}.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+.hero-shot{margin-top:56px;animation:fade 1.2s 1.3s backwards}.hero-shot img{cursor:default}figcaption{padding:12px 16px;color:var(--m);font-size:14px}
+.sub{color:var(--m);max-width:540px;margin:-20px 0 28px}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:22px}.gal .shot{max-width:none}.gal .shot:first-child{grid-column:1/-1}
+.tm2{display:grid;grid-template-columns:1fr 360px;gap:56px;align-items:center}
+.sws{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:22px}.sws button{display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;font:inherit;font-size:12px;color:var(--m);cursor:pointer;min-height:48px}
+.sws span{position:relative;display:block;width:100%;aspect-ratio:1;border-radius:14px;border:2px solid;overflow:hidden}.sws i{position:absolute;left:12%;right:12%;top:18%;height:28%;border-radius:6px}.sws u{position:absolute;left:12%;bottom:16%;width:30%;height:22%;border-radius:8px}
+.sws button.on span{outline:3px solid var(--a);outline-offset:2px}.sws button.on{color:var(--f);font-weight:600}
+.dots{display:flex;flex-wrap:wrap;gap:12px}.dots button{width:36px;height:36px;border-radius:50%;border:3px solid transparent;background-clip:padding-box;cursor:pointer}.dots button.on{outline:3px solid var(--f);outline-offset:1px}
+.mm{background:var(--bg);border:1px solid var(--l);border-radius:20px;padding:14px;box-shadow:0 18px 44px rgba(0,0,0,.2);display:grid;gap:12px}.mm-top{display:flex;gap:12px;align-items:center}.mm-top b{display:block;font-size:14px}.mm-top small{color:var(--m);font-size:12px}
+.mm-cv{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--a),var(--l))}.mm-ly{text-align:center;font-size:13px;font-weight:600;color:var(--a)}
+.mm-pr{display:flex;align-items:center;gap:8px}.mm-pr small{font-size:11px;color:var(--m)}.mm-bar{flex:1;height:5px;border-radius:5px;background:var(--l);overflow:hidden}.mm-bar i{display:block;height:100%;background:var(--a);animation:fill 8s linear infinite}
+.mm-ct{display:flex;justify-content:center;align-items:center;gap:18px}.mm-ct svg{width:20px;height:20px;fill:currentColor}.mm-ct svg:first-child{fill:none}.mm-pp{width:44px;height:44px;border-radius:50%;background:var(--a);color:var(--on,#fff);display:grid;place-items:center}.mm-pp svg{width:22px;height:22px}
+.cap{color:var(--m);font-size:14px;margin-top:14px;text-align:center}
+#lb{position:fixed;inset:0;background:#000c;display:grid;place-items:center;z-index:50;padding:20px;cursor:zoom-out}#lb[hidden]{display:none}#lb img{max-width:100%;max-height:100%;border-radius:12px}
+body{transition:background-color .4s,color .4s}
+@media(max-width:820px){.gal{grid-template-columns:1fr}.tm2{grid-template-columns:1fr}}
 @media(max-width:820px){.two{grid-template-columns:1fr}.mq{font-size:110px}h1{letter-spacing:-1.5px}}
 @media(prefers-reduced-motion:reduce){*,*::before{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}}
 </style></head><body>
 <div class="bl" aria-hidden="true"><i></i><i></i><i></i></div>
-<header><b>FoxPrime</b><nav><a href="#recursos">Recursos</a><a href="#como">Como instalar</a><a class="btn s ap" href="#">Apoiar</a></nav></header>
+<header><b>FoxPrime</b><nav><a href="#recursos">Recursos</a><a href="#telas">Telas</a><a href="#temas">Temas</a><a href="#como">Como instalar</a><a class="btn s ap" href="#">Apoiar</a></nav></header>
 <div class="hero"><div class="mq" aria-hidden="true"><span>Música / Temas / Visualizadores / Equalizador / Letras /</span><span>Música / Temas / Visualizadores / Equalizador / Letras /</span><span>Música / Temas / Visualizadores / Equalizador / Letras /</span><span>Música / Temas / Visualizadores / Equalizador / Letras /</span></div>
 <h1 id="t">FoxPrime</h1>
-<p class="lead">Seu player de música para Windows, com temas, visualizadores e equalizador. Gratuito e leve.</p>
-<a class="btn dl cta" href="#baixar">Baixar para Windows</a><small class="note">Versão 1.0.0 · Windows 10 e 11 · gratuito</small>
-<div class="win" aria-hidden="true"><div class="np"><div class="cv"></div><div><b>Tocando agora</b><small>Sua música favorita</small></div></div>
-<div class="viz"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+<p class="lead">Seu player de música para Windows: simples de usar, com mini player, vários temas e equalizador. Gratuito e leve.</p>
+<a class="btn dl cta" href="#baixar">Baixar para Windows</a><small class="note">Versão <span class="ver">1.4.0</span> · Windows 10 e 11 · gratuito</small>
+<figure class="shot hero-shot"><img src="print-musica-claro.jpg" alt="FoxPrime tocando música no tema claro, com biblioteca, busca e visualizador" width="1600" height="847"></figure></div>
 <section id="recursos"><h2 class="rv">Tudo o que você precisa, nada além disso.</h2><div class="ft">
-<div class="rv"><h3>Para você</h3><p>Sugestões montadas a partir das músicas que você curte e ouve, com mix e “parecido com” seus artistas favoritos.</p></div>
-<div class="rv"><h3>7 visualizadores</h3><p>Barras, espelho, onda, circular, área, LED e pulso. Troque com um clique enquanto a música toca.</p></div>
+<div class="rv"><h3>Fácil de usar</h3><p>Abriu, é só buscar e tocar. Tudo fica à mão, sem menus escondidos e sem configuração.</p></div>
+<div class="rv"><h3>Mini player flutuante</h3><p>Controle a música numa janelinha que fica por cima de tudo: pausar, trocar, curtir e acompanhar a letra sem abrir o app.</p></div>
+<div class="rv"><h3>Baixe sem abrir o app</h3><p>Copiou um link compatível? Uma janelinha aparece sozinha para baixar vídeo ou áudio, no formato e na qualidade que você escolher.</p></div>
 <div class="rv"><h3>10 temas e 10 cores</h3><p>Do branco ao Amoled, com cor de destaque à sua escolha. O app é todo seu.</p></div>
+<div class="rv"><h3>10 visualizadores</h3><p>Barras, espelho, onda, circular, área, LED, pontos, picos, cordas e fita. Troque com um clique enquanto a música toca.</p></div>
 <div class="rv"><h3>Equalizador completo</h3><p>10 bandas, graves, tom, velocidade e reverb para deixar o som do seu jeito.</p></div>
-<div class="rv"><h3>Letras e mini player</h3><p>Letras sincronizadas, fila, temporizador de sono e um mini player flutuante.</p></div>
-<div class="rv"><h3>Seis idiomas</h3><p>Português, inglês, espanhol, francês, alemão e italiano.</p></div></div></section>
-<section id="como"><div class="two"><div><h2 class="rv">Três passos.</h2><ol>
+<div class="rv"><h3>Para você</h3><p>Sugestões montadas a partir das músicas que você curte e ouve, com mix e “parecido com” seus artistas favoritos.</p></div>
+<div class="rv"><h3>Letras, fila e seis idiomas</h3><p>Letras sincronizadas, fila, temporizador de sono. Em português, inglês, espanhol, francês, alemão e italiano.</p></div></div></section>
+<section id="telas"><h2 class="rv">Veja como é por dentro.</h2><p class="sub rv">Toque em uma imagem para ampliar.</p><div class="gal">
+<figure class="shot rv"><img src="print-musica-escuro.jpg" alt="FoxPrime no tema escuro" width="1600" height="847" loading="lazy"><figcaption>Biblioteca, busca, fila e visualizador na mesma tela. Aqui no tema escuro.</figcaption></figure>
+<figure class="shot rv"><img src="print-tela-cheia.jpg" alt="Tela cheia com visualizador" width="1600" height="900" loading="lazy"><figcaption>Tela cheia com visualizador animado e a capa em destaque.</figcaption></figure>
+<figure class="shot rv"><img src="print-modo-cartaz.jpg" alt="Modo cartaz com capa grande" width="1600" height="900" loading="lazy"><figcaption>Modo cartaz: capa grande, barras no ritmo e o nome da música no canto.</figcaption></figure>
+<figure class="shot rv"><img src="print-baixar.jpg" alt="Tela de baixar com link colado" width="1600" height="841" loading="lazy"><figcaption>Cole um link, veja a prévia e baixe.</figcaption></figure>
+<figure class="shot rv"><img src="print-qualidade.jpg" alt="Escolha de qualidade e corte de trecho" width="1600" height="844" loading="lazy"><figcaption>Escolha a qualidade e o formato, e corte só o trecho que quiser.</figcaption></figure></div></section>
+<section id="temas"><div class="tm2"><div><h2 class="rv">Seu jeito, suas cores.</h2><p class="sub rv">São 10 temas e 10 cores de destaque. Toque nas amostras e veja o site mudar na hora.</p><div class="sws rv" id="sws"></div><div class="dots rv" id="dots"></div></div>
+<div class="rv"><div class="mm" aria-label="Exemplo do mini player flutuante"><div class="mm-top"><div class="mm-cv"></div><div><b>Lo-fi para focar</b><small>Cutie Blue</small></div></div><div class="mm-ly">♪ a letra acompanha a música</div><div class="mm-pr"><small>1:12</small><div class="mm-bar"><i></i></div><small>3:27</small></div>
+<div class="mm-ct"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.8a4.3 4.3 0 0 1 7.5 2.7c0 5.4-7.5 10-7.5 10z" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg viewBox="0 0 24 24"><path d="M18 5l-9 7 9 7zM5 5h2v14H5z"/></svg><span class="mm-pp"><svg viewBox="0 0 24 24"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></span><svg viewBox="0 0 24 24"><path d="M6 5l9 7-9 7zM17 5h2v14h-2z"/></svg></div></div>
+<p class="cap">O mini player fica por cima de tudo: controle a música sem abrir a janela principal.</p></div></div></section>
+<section id="como"><div class="two"><div><h2 class="rv">Três passos.</h2><p class="sub rv">Instala em poucos cliques, sem configurar nada.</p><ol>
 <li class="rv"><b>Baixe o instalador</b><span>Clique no botão “Baixar para Windows” no final da página.</span></li>
 <li class="rv"><b>Execute o instalador</b><span>Se o Windows mostrar um aviso, clique em “Mais informações” e depois em “Executar assim mesmo”.</span></li>
 <li class="rv"><b>Abra o FoxPrime</b><span>Pronto. O atalho fica na sua área de trabalho e no menu Iniciar.</span></li></ol></div>
@@ -84,16 +112,34 @@ footer a{color:var(--m);margin-left:18px}
 <h3>Gostou do FoxPrime?</h3><p>O app é gratuito e feito de forma independente. Qualquer valor ajuda a manter e a melhorar o projeto.</p>
 <a class="btn ap" href="#" target="_blank" rel="noopener">Apoiar pelo Livepix</a></aside></div></section>
 <section class="end" id="baixar"><h2 class="rv">Pronto para instalar?</h2><a class="btn dl rv" href="#">Baixar o FoxPrime</a>
-<small class="note">Versão 1.0.0 · Windows 10 e 11 · gratuito</small>
+<small class="note">Versão <span class="ver">1.4.0</span> · Windows 10 e 11 · gratuito</small>
 <small class="note">Se o Windows mostrar um aviso, clique em “Mais informações” e depois em “Executar assim mesmo”.</small></section>
-<footer><span>© 2026 FoxPrime · <a href="mailto:arlordcontato@gmail.com" style="margin:0">arlordcontato@gmail.com</a></span><span><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos de uso</a><a href="mailto:arlordcontato@gmail.com">Contato</a></span></footer>
+<div id="lb" hidden><img alt=""></div>
+<footer><span>© 2026 FoxPrime · <a href="mailto:foxhubbr@gmail.com" style="margin:0">foxhubbr@gmail.com</a></span><span><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos de uso</a><a href="mailto:foxhubbr@gmail.com">Contato</a></span></footer>
 <script>
 /* ===== CONFIGURE AQUI ===== */
-const DOWNLOAD_URL="https://github.com/lordappszin/Foxprime/releases/latest/download/FoxPrime-Setup.exe"; /* ex.: link da página Releases do GitHub */
-const LIVEPIX_URL="https://livepix.gg/arlorddd";
+const DOWNLOAD_URL="COLE_AQUI_O_LINK_DO_SEU_INSTALADOR"; /* ex.: link da página Releases do GitHub */
+const LIVEPIX_URL="https://livepix.gg/leleyzaobr";
 const okDL=/^https?:\/\//.test(DOWNLOAD_URL);
 document.querySelectorAll('.dl').forEach(a=>{a.href=okDL?DOWNLOAD_URL:'#baixar';if(!okDL)a.addEventListener('click',e=>{e.preventDefault();alert('O instalador ainda não foi publicado. Configure DOWNLOAD_URL no index.html.')})});
 document.querySelectorAll('.ap').forEach(a=>{a.href=LIVEPIX_URL;a.target='_blank';a.rel='noopener'});
+
+/* ===== versão mostrada no site (troque aqui quando lançar outra) ===== */
+const VERSION="1.4.0";document.querySelectorAll('.ver').forEach(e=>e.textContent=VERSION);
+/* ===== amostras de tema (mesma paleta do app) ===== */
+const TH={branco:['Branco','#ffffff','#f6f4f1','#e9e4de','#1d1a17','#8a837b','#7b4b2a'],creme:['Creme','#fbf6ef','#f3ebe0','#e4d8c8','#2a1d15','#8a7866','#7b4b2a'],floresta:['Floresta','#f4f8f3','#e9f0e6','#d3dfcf','#1b2a1d','#6f8571','#2f7d4f'],oceano:['Oceano','#f2f8fc','#e4eff7','#cfe0ec','#14232e','#6b8394','#1c7ed6'],rosa:['Rosa','#fff5f7','#fde9ee','#f3d0da','#2b1a20','#94707c','#d6336c'],escuro:['Escuro','#151311','#1f1c19','#322d28','#f1ebe4','#9c948b','#d08a3c'],grafite:['Grafite','#1b1d1f','#25282b','#383c40','#eceff1','#959ca2','#4fd1a5'],noite:['Noite','#0f1420','#171d2c','#28314a','#e8ecf6','#8d97b3','#6d9bff'],ameixa:['Ameixa','#1a1423','#241b30','#3a2c4d','#f0e9f8','#a595b8','#c084fc'],amoled:['Amoled','#000000','#0d0d0d','#262626','#f2f2f2','#8c8c8c','#d08a3c']};
+const DK=['escuro','grafite','noite','ameixa','amoled'],AX=[['Café','#7b4b2a'],['Caramelo','#d08a3c'],['Laranja','#f08c00'],['Vermelho','#e03131'],['Rosa','#e0507a'],['Roxo','#8e44ad'],['Azul','#3d6df2'],['Ciano','#1098ad'],['Verde','#2f9e6e'],['Lima','#82c91e']];
+let ct='branco',ca=-1;
+function paintSite(){const t=TH[ct],a=ca>=0?AX[ca][1]:t[6],r=document.documentElement.style,[R,G,B]=[1,3,5].map(i=>parseInt(a.substr(i,2),16));
+ ['bg','s','l','f','m'].forEach((n,i)=>r.setProperty('--'+n,t[i+1]));r.setProperty('--a',a);r.setProperty('--on',(.299*R+.587*G+.114*B)/255>.6?'#1d1a17':'#fff');r.colorScheme=DK.includes(ct)?'dark':'light';
+ document.querySelectorAll('#sws button').forEach(b=>b.classList.toggle('on',b.dataset.k===ct));document.querySelectorAll('#dots button').forEach(b=>b.classList.toggle('on',+b.dataset.i===ca))}
+document.getElementById('sws').innerHTML=Object.keys(TH).map(k=>{const t=TH[k];return `<button data-k="${k}" aria-label="Tema ${t[0]}"><span style="background:${t[1]};border-color:${t[3]}"><i style="background:${t[2]}"></i><u style="background:${t[6]}"></u></span>${t[0]}</button>`}).join('');
+document.getElementById('dots').innerHTML=AX.map((a,i)=>`<button data-i="${i}" style="background:${a[1]}" aria-label="Cor ${a[0]}"></button>`).join('');
+document.getElementById('sws').addEventListener('click',e=>{const b=e.target.closest('button');if(b){ct=b.dataset.k;ca=-1;paintSite()}});
+document.getElementById('dots').addEventListener('click',e=>{const b=e.target.closest('button');if(b){ca=+b.dataset.i;paintSite()}});paintSite();
+/* ===== ampliar prints ===== */
+const lb=document.getElementById('lb');document.querySelectorAll('.gal img').forEach(i=>i.addEventListener('click',()=>{lb.querySelector('img').src=i.src;lb.hidden=false}));
+lb.addEventListener('click',()=>{lb.hidden=true});addEventListener('keydown',e=>{if(e.key==='Escape')lb.hidden=true});
 const t=document.getElementById('t');t.setAttribute('aria-label',t.textContent);t.innerHTML=[...t.textContent].map((c,i)=>`<span aria-hidden="true" style="--i:${i}">${c}</span>`).join('');
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
