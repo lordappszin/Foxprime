@@ -125,7 +125,7 @@ body{transition:background-color .4s,color .4s}
 <script>
 /* ===== CONFIGURE AQUI ===== */
 const DOWNLOAD_URL="https://github.com/lordappszin/Foxprime/releases/latest/download/FoxPrime-Setup.exe"; /* ex.: link da página Releases do GitHub */
-const APK_URL="COLE_AQUI_O_LINK_DO_SEU_APK"; /* https://github.com/lordappszin/Foxprime/releases/latest/download/FoxPrime.apk */
+const APK_URL="https://github.com/lordappszin/Foxprime/releases/latest/download/FoxPrime.apk"; /* https://github.com/lordappszin/Foxprime/releases/latest/download/FoxPrime.apk */
 const LIVEPIX_URL="https://livepix.gg/leleyzaobr";
 const okDL=/^https?:\/\//.test(DOWNLOAD_URL);
 document.querySelectorAll('.dl').forEach(a=>{a.href=okDL?DOWNLOAD_URL:'#baixar';if(!okDL)a.addEventListener('click',e=>{e.preventDefault();alert('O instalador ainda não foi publicado. Configure DOWNLOAD_URL no index.html.')})});
