@@ -23,6 +23,7 @@ body{font:16px/1.6 "Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;back
 header{display:flex;justify-content:space-between;align-items:center;max-width:1080px;margin:0 auto;padding:22px 24px}
 header b{font:600 22px var(--fs)}header a:not(.btn){color:var(--m);text-decoration:none;margin-left:22px;font-size:14px;transition:color .25s}header a:not(.btn):hover{color:var(--f)}
 .btn{display:inline-block;background:var(--a);color:var(--on,#fff);font-weight:600;padding:14px 30px;border-radius:999px;text-decoration:none;transition:transform .3s var(--e),box-shadow .3s}
+.btn.o{background:transparent;color:var(--f);box-shadow:inset 0 0 0 2px var(--a)}.btn.o:hover{box-shadow:inset 0 0 0 2px var(--a),0 12px 30px rgba(123,75,42,.3)}.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(123,75,42,.3)}.btn:active{transform:scale(.97)}.btn.s{padding:9px 20px;font-size:14px}
 .hero{position:relative;text-align:center;padding:9vh 24px 40px}
 .mq{position:absolute;left:0;top:2vh;display:flex;width:max-content;font:700 170px/1 var(--fs);color:transparent;-webkit-text-stroke:1.2px var(--l);white-space:nowrap;pointer-events:none;animation:mq 50s linear infinite;z-index:-1}.mq span{padding-right:.5em}
@@ -82,8 +83,8 @@ body{transition:background-color .4s,color .4s}
 <header><b>FoxPrime</b><nav><a href="#recursos">Recursos</a><a href="#telas">Telas</a><a href="#temas">Temas</a><a href="#como">Como instalar</a><a class="btn s ap" href="#">Apoiar</a></nav></header>
 <div class="hero"><div class="mq" aria-hidden="true"><span>Música / Temas / Visualizadores / Equalizador / Letras /</span><span>Música / Temas / Visualizadores / Equalizador / Letras /</span><span>Música / Temas / Visualizadores / Equalizador / Letras /</span><span>Música / Temas / Visualizadores / Equalizador / Letras /</span></div>
 <h1 id="t">FoxPrime</h1>
-<p class="lead">Seu player de música para Windows: simples de usar, com mini player, vários temas e equalizador. Gratuito e leve.</p>
-<a class="btn dl cta" href="#baixar">Baixar para Windows</a><small class="note">Versão <span class="ver">1.4.0</span> · Windows 10 e 11 · gratuito</small>
+<p class="lead">Seu player de música para Windows e Android: simples de usar, com mini player, vários temas e equalizador. Gratuito e leve.</p>
+<div class="btns cta"><a class="btn dl" href="#baixar">Baixar para Windows</a><a class="btn o apk" href="#baixar">Baixar para Android (APK)</a></div><small class="note">Windows <span class="ver">1.4.0</span> · Windows 10 e 11 · Android <span class="verA">0.3.19</span> · gratuito</small>
 <figure class="shot hero-shot"><img src="print-musica-claro.jpg" alt="FoxPrime tocando música no tema claro, com biblioteca, busca e visualizador" width="1600" height="847"></figure></div>
 <section id="recursos"><h2 class="rv">Tudo o que você precisa, nada além disso.</h2><div class="ft">
 <div class="rv"><h3>Fácil de usar</h3><p>Abriu, é só buscar e tocar. Tudo fica à mão, sem menus escondidos e sem configuração.</p></div>
@@ -107,25 +108,33 @@ body{transition:background-color .4s,color .4s}
 <section id="como"><div class="two"><div><h2 class="rv">Três passos.</h2><p class="sub rv">Instala em poucos cliques, sem configurar nada.</p><ol>
 <li class="rv"><b>Baixe o instalador</b><span>Clique no botão “Baixar para Windows” no final da página.</span></li>
 <li class="rv"><b>Execute o instalador</b><span>Se o Windows mostrar um aviso, clique em “Mais informações” e depois em “Executar assim mesmo”.</span></li>
-<li class="rv"><b>Abra o FoxPrime</b><span>Pronto. O atalho fica na sua área de trabalho e no menu Iniciar.</span></li></ol></div>
+<li class="rv"><b>Abra o FoxPrime</b><span>Pronto. O atalho fica na sua área de trabalho e no menu Iniciar.</span></li></ol>
+<h3 class="rv" style="margin-top:34px">No Android</h3><ol>
+<li class="rv"><b>Baixe o APK</b><span>Toque em “Baixar para Android (APK)” e salve o arquivo FoxPrime.apk no celular.</span></li>
+<li class="rv"><b>Permita a instalação</b><span>Abra o arquivo. Se o Android perguntar, permita instalar apps desta fonte.</span></li>
+<li class="rv"><b>Instale e abra</b><span>Toque em Instalar. Para atualizar no futuro, instale o APK novo por cima: seus dados ficam.</span></li></ol></div>
 <aside class="apc rv" aria-label="Apoie o projeto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.8a4.3 4.3 0 0 1 7.5 2.7c0 5.4-7.5 10-7.5 10z"/></svg>
 <h3>Gostou do FoxPrime?</h3><p>O app é gratuito e feito de forma independente. Qualquer valor ajuda a manter e a melhorar o projeto.</p>
 <a class="btn ap" href="#" target="_blank" rel="noopener">Apoiar pelo Livepix</a></aside></div></section>
-<section class="end" id="baixar"><h2 class="rv">Pronto para instalar?</h2><a class="btn dl rv" href="#">Baixar o FoxPrime</a>
-<small class="note">Versão <span class="ver">1.4.0</span> · Windows 10 e 11 · gratuito</small>
+<section class="end" id="baixar"><h2 class="rv">Pronto para instalar?</h2><div class="btns rv"><a class="btn dl" href="#">Baixar para Windows</a><a class="btn o apk" href="#">Baixar para Android (APK)</a></div>
+<small class="note">Windows <span class="ver">1.4.0</span> · Windows 10 e 11 · Android <span class="verA">0.3.19</span> · gratuito</small>
+<small class="note">No Android, se o celular avisar sobre app de fonte desconhecida, permita a instalação só para este arquivo.</small>
 <small class="note">Se o Windows mostrar um aviso, clique em “Mais informações” e depois em “Executar assim mesmo”.</small></section>
 <div id="lb" hidden><img alt=""></div>
 <footer><span>© 2026 FoxPrime · <a href="mailto:foxhubbr@gmail.com" style="margin:0">foxhubbr@gmail.com</a></span><span><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos de uso</a><a href="mailto:foxhubbr@gmail.com">Contato</a></span></footer>
 <script>
 /* ===== CONFIGURE AQUI ===== */
-const DOWNLOAD_URL="https://github.com/lordappszin/Foxprime/releases/latest/download/FoxPrime-Setup.exe"; /* ex.: link da página Releases do GitHub */
+const DOWNLOAD_URL="COLE_AQUI_O_LINK_DO_SEU_INSTALADOR"; /* ex.: link da página Releases do GitHub */
+const APK_URL="COLE_AQUI_O_LINK_DO_SEU_APK"; /* ex.: https://github.com/SEUUSUARIO/foxprime/releases/latest/download/FoxPrime.apk */
 const LIVEPIX_URL="https://livepix.gg/leleyzaobr";
 const okDL=/^https?:\/\//.test(DOWNLOAD_URL);
 document.querySelectorAll('.dl').forEach(a=>{a.href=okDL?DOWNLOAD_URL:'#baixar';if(!okDL)a.addEventListener('click',e=>{e.preventDefault();alert('O instalador ainda não foi publicado. Configure DOWNLOAD_URL no index.html.')})});
+const okAPK=/^https?:\/\//.test(APK_URL);
+document.querySelectorAll('.apk').forEach(a=>{a.href=okAPK?APK_URL:'#baixar';if(!okAPK)a.addEventListener('click',e=>{e.preventDefault();alert('O APK ainda não foi publicado. Configure APK_URL no index.html.')})});
 document.querySelectorAll('.ap').forEach(a=>{a.href=LIVEPIX_URL;a.target='_blank';a.rel='noopener'});
 
 /* ===== versão mostrada no site (troque aqui quando lançar outra) ===== */
-const VERSION="1.4.0";document.querySelectorAll('.ver').forEach(e=>e.textContent=VERSION);
+const VERSION="1.4.0",VERSION_ANDROID="0.3.19";document.querySelectorAll('.ver').forEach(e=>e.textContent=VERSION);document.querySelectorAll('.verA').forEach(e=>e.textContent=VERSION_ANDROID);
 /* ===== amostras de tema (mesma paleta do app) ===== */
 const TH={branco:['Branco','#ffffff','#f6f4f1','#e9e4de','#1d1a17','#8a837b','#7b4b2a'],creme:['Creme','#fbf6ef','#f3ebe0','#e4d8c8','#2a1d15','#8a7866','#7b4b2a'],floresta:['Floresta','#f4f8f3','#e9f0e6','#d3dfcf','#1b2a1d','#6f8571','#2f7d4f'],oceano:['Oceano','#f2f8fc','#e4eff7','#cfe0ec','#14232e','#6b8394','#1c7ed6'],rosa:['Rosa','#fff5f7','#fde9ee','#f3d0da','#2b1a20','#94707c','#d6336c'],escuro:['Escuro','#151311','#1f1c19','#322d28','#f1ebe4','#9c948b','#d08a3c'],grafite:['Grafite','#1b1d1f','#25282b','#383c40','#eceff1','#959ca2','#4fd1a5'],noite:['Noite','#0f1420','#171d2c','#28314a','#e8ecf6','#8d97b3','#6d9bff'],ameixa:['Ameixa','#1a1423','#241b30','#3a2c4d','#f0e9f8','#a595b8','#c084fc'],amoled:['Amoled','#000000','#0d0d0d','#262626','#f2f2f2','#8c8c8c','#d08a3c']};
 const DK=['escuro','grafite','noite','ameixa','amoled'],AX=[['Café','#7b4b2a'],['Caramelo','#d08a3c'],['Laranja','#f08c00'],['Vermelho','#e03131'],['Rosa','#e0507a'],['Roxo','#8e44ad'],['Azul','#3d6df2'],['Ciano','#1098ad'],['Verde','#2f9e6e'],['Lima','#82c91e']];
